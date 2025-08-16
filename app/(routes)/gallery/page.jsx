@@ -12,6 +12,8 @@ const categories = {
 const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [images, setImages] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const allImages = [
@@ -24,6 +26,17 @@ const Page = () => {
     ];
     setImages(allImages);
   }, []);
+
+  const openModal = (src) => {
+    setSelectedImage(src);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
 
   const filteredImages =
     selectedCategory === "all"
@@ -61,8 +74,9 @@ const Page = () => {
             <div
               key={idx}
               className="relative aspect-square rounded overflow-hidden"
+              onClick={() => openModal(src)}
             >
-              <Image
+              <Image className="z-30 cursor-pointer"
                 src={src}
                 alt={`gallery-img-${idx}`}
                 fill
@@ -78,6 +92,29 @@ const Page = () => {
         <p className="text-center text-gray-400">
           No images found for this category.
         </p>
+      )}
+
+      {isModalOpen && (
+        <div className=" fixed inset-0 bg-[rgb(0,0,0,0.5)] flex items-center justify-center z-50">
+          <div className="bg-transparent p-6 rounded-lg relative max-w-4xl max-h-[90vh] scroll-hide overflow-auto">
+            <button
+              className="absolute top-[-2px] cursor-pointer right-[-2px] text-black text-4xl"
+              onClick={closeModal}
+            >
+              ×
+            </button>
+            <Image
+              src={selectedImage}
+              alt="Selected image"
+              width={800}
+              height={600}
+              style={{ objectFit: "contain" }}
+              onError={(e) => {
+                e.target.style.display = "none";
+              }}
+            />
+          </div>
+        </div>
       )}
     </div>
   );

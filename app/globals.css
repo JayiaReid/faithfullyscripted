@@ -35,6 +35,10 @@ body {
   font-family: cursive;
 }
 
+.scroll-hide::-webkit-scrollbar{
+  display: none;
+}
+
 .font-open-sans {
   font-family: 'Open Sans', sans-serif;
 }
