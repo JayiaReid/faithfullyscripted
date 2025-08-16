@@ -34,7 +34,7 @@ export default function Home() {
           
           
           {/* hero */}
-          <div className="my-5 bg-[url('/gallery/i0.png')] h-screen bg-cover bg-center bg-no-repeat w-full">
+          <div className="my-5 bg-[url('/gallery/ai1.png')] h-screen bg-cover bg-center bg-no-repeat w-full">
              {/* <div className="h-full w-full relative z-20 bg-[rgb(0,0,0,0.2)]"></div> */}
             {/*<Image
               src="/gallery/i0.png"

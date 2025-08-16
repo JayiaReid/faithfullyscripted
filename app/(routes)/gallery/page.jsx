@@ -3,11 +3,13 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const categories = {
-  aesthetic: "i",
-  "vision board": "v",
-  "christian core": "c",
-  other: "a",
+  "beauty in creation": "c",
+  "abstract art": "ai",
+  "vision boards": "v",
+  "faith aesthetic": "f",
+  "bible verses": "b"
 };
+
 
 const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -17,12 +19,16 @@ const Page = () => {
 
   useEffect(() => {
     const allImages = [
-      // Aesthetic (i0-i6)
-      "/gallery/i0.png", "/gallery/i1.png", "/gallery/i2.png",
-      "/gallery/i3.png", "/gallery/i4.png", "/gallery/i5.png",
-      "/gallery/i6.png",
-      // Vision Board (v1-v2)
+      // beauty in creation (i0-i6)
+      "/gallery/c1.png",
+      // ai
+      "/gallery/ai1.png", "/gallery/ai2.png", "/gallery/ai3.png",
+      // Vision Board
       "/gallery/v1.png", "/gallery/v2.png",
+      // christian core
+      "/gallery/f1.png", "/gallery/f2.png",
+      // bible verses
+      "/gallery/b1.png"
     ];
     setImages(allImages);
   }, []);

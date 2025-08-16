@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
 
@@ -45,7 +46,15 @@ const News_head = () => {
           {/* header */}
           <div className="flex justify-between items-center mt-5">
             {/* socials */}
-            <div> socials</div>
+            <div className='text-xs flex flex-col h-full gap-3'> 
+              <h2>Let's connect:</h2>
+              <div className='flex flex-col gap-[5px]'>
+                <div className='gap-[5px] font-extralight text-xs flex'> <Image src="/logos/pinterest-logo.png" height={15} width={15} /> faithfullyscripted</div>
+                
+                <div className='gap-[5px] flex font-extralight text-xs'><Image src="/logos/instagram.png" height={15} width={15} /> iguessyoucouldcallthisablog</div>
+                
+              </div>
+              </div>
             {/* title */}
             <div className="flex relative z-30 flex-col ">
               <Link href={'/'}><h2 className="cursor-pointer text-[70px] font-qwigley">FAITHFULLY SCRIPTED</h2></Link>
