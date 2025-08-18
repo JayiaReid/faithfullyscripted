@@ -52,7 +52,8 @@ const Page = () => {
         );
 
   return (
-    <div className="min-h-screen text-black">
+    <div className="min-h-screen mx-10 text-black">
+      <h1 className="text-4xl font-bold my-10">The Gallery</h1>
       <div className="z-30 mt-5 flex justify-center gap-6 mb-8">
         <h2
           onClick={() => setSelectedCategory("all")}
