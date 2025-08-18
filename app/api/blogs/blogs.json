@@ -2,13 +2,15 @@
   {
     "id": 1,
     "title": "First Blog Post",
-    "content": "This is the content of the first blog post.",
-    "coverImage": "/gallery/ai3.png"
+    "content": "This is the content of the first blog post. With over 600 million blogs on the internet, you’ve likely encountered one or two blogs—you’re even on one right now. But you may still wonder what exactly is a blog? How does it differ from a website? Why does every business seem to have one? You may even ask yourself, how can I start my own blog? In short, many individuals and businesses create a blog to share their ideas and expertise as well as boost their online presence. This article will answer your most pressing blogging questions and help you understand how and why blogs succeed, plus show how you can utilize them.",
+    "coverImage": "/gallery/ai3.png",
+    "datePosted": "01/02/2020"
   },
   {
     "id": 2,
     "title": "Second Blog Post",
     "content": "This is the content of the second blog post.",
-    "coverImage": "/gallery/ai3.png"
+    "coverImage": "/gallery/ai3.png",
+    "datePosted": "01/02/2020"
   }
 ]
