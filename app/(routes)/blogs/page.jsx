@@ -12,7 +12,7 @@ const page = () => {
       const data = await res.json();
 
       const sorted = data.sort((a, b) => b.id - a.id);
-      setPosts(data);
+      setPosts(sorted);
       console.log(data)
     };
     fetchPosts();
@@ -25,7 +25,7 @@ const page = () => {
 
   return (
     <div className="min-h-screen mx-10 josefin-text">
-      <h1 className="text-4xl font-bold my-10">The Blog</h1>
+      <h1 className="text-4xl font-bold my-10">I GUESS YOU COULD CALL THIS A BLOG</h1>
 
       {posts.length > 0 && (
         <>
