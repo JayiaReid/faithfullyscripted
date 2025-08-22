@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 const page = () => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -13,16 +14,19 @@ const page = () => {
       const sorted = data.sort((a, b) => b.id - a.id);
       setPosts(sorted);
       console.log(data);
+      setLoading(false)
     };
     fetchPosts();
   }, []);
 
+  if (loading) return <div className="flex items-center justify-center w-full h-screen"><div className="loader"></div></div>
+
   return (
     <div className="min-h-screen mx-10 josefin-text">
       <div className="flex flex-col gap-0 items-center">
-        <h1 className="text-4xl font-bold my-10">POETRY</h1>
-        {/* small quote*/}
-        <div className="w-full h-[200px] relative">
+        <h1 className="text-4xl font-bold mt-10">POETRY</h1>
+        <h2 className="font-bold italic">"Gracious words are a honeycomb, sweet to the soul and healing to the bones" - Proverbs 16:24</h2>
+        <div className="w-full h-[200px] mt-5 relative">
           <Image
             src="/gallery/ai3.png"
             alt={"cover"}
@@ -37,7 +41,7 @@ const page = () => {
             {posts.map((post) => (
               <div
                 key={post.id}
-                className="bg-white p-6 border-r-[2px]"
+                className="bg-white p-6 sm:border-b-[2px] sm:border-r-0 md:border-b-0 md:border-r-[2px]"
               >
                 <h2 className="text-xs text-gray-400 mb-2">
                   {post?.datePosted}

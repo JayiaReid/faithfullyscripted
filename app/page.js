@@ -85,7 +85,7 @@ export default function Home() {
                 />
                 <div className="flex gap-5 flex-col mt-5">
                   <button
-                  type="submit"
+                  type="submit" disabled
                   className="text-xs  bg-black text-center text-white p-2 w-[120px]"
                 >
                   <h2 className="z-30 relative">SUBSCRIBE</h2>

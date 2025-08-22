@@ -5,6 +5,7 @@ import React, {useEffect, useState} from 'react'
 const page = () => {
    const [posts, setPosts] = useState([]);
    const [showFull, setShowFull] = useState(false)
+   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -14,6 +15,7 @@ const page = () => {
       const sorted = data.sort((a, b) => b.id - a.id);
       setPosts(sorted);
       console.log(data)
+      setLoading(false)
     };
     fetchPosts();
   }, []);
@@ -22,6 +24,9 @@ const page = () => {
     const words = content.split(" ");
     return words.slice(0, 30).join(" ") + (words.length > 30 ? "..." : "");
   };
+
+    if (loading) return <div className="flex items-center justify-center w-full h-screen"><div className="loader"></div></div>
+
 
   return (
     <div className="min-h-screen mx-10 josefin-text">

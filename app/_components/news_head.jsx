@@ -35,8 +35,8 @@ const News_head = () => {
               <Link href={"/gallery"}>
                 <h2>Gallery</h2>
               </Link>
-              <Link href={"/subscribe"}>
-                <h2>Subscribe</h2>
+              <Link href={"/studies"}>
+                <h2>Studies</h2>
               </Link>
             </div>
           )}
@@ -44,11 +44,11 @@ const News_head = () => {
         <div className="w-full h-[2px] bg-black"></div>
         <div className="mx-10">
           {/* header */}
-          <div className="flex justify-between items-center mt-5">
+          <div className="flex sm:flex-col md:flex-row justify-between items-center mt-5">
             {/* socials */}
-            <div className='text-xs flex flex-col h-full gap-3'> 
-              <h2>Let's connect:</h2>
-              <div className='flex flex-col gap-[5px]'>
+            <div className='text-xs sm:flex-row md:flex-col flex flex-col h-full gap-3'> 
+              <h2 className='sm:font-bold'>Let's connect:</h2>
+              <div className='flex sm:flex-row md:flex-col flex-col gap-[5px]'>
                 <div className='gap-[5px] font-extralight text-xs flex'> <Image src="/logos/pinterest-logo.png" height={15} width={15} /> faithfullyscripted</div>
                 
                 <div className='gap-[5px] flex font-extralight text-xs'><Image src="/logos/instagram.png" height={15} width={15} /> iguessyoucouldcallthisablog</div>
@@ -57,11 +57,11 @@ const News_head = () => {
               </div>
             {/* title */}
             <div className="flex relative z-30 flex-col ">
-              <Link href={'/'}><h2 className="cursor-pointer text-[70px] font-qwigley">FAITHFULLY SCRIPTED</h2></Link>
+              <Link href={'/'}><h2 className="cursor-pointer md:text-[60px] sm:text-[50px] font-qwigley">FAITHFULLY SCRIPTED</h2></Link>
             </div>
 
             {/* ect */}
-            <div>
+            <div className='sm:hidden md:block'>
               <h2>etc.</h2>
             </div>
           </div>
