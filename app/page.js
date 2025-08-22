@@ -112,9 +112,7 @@ export default function Home() {
               />
               <h2 className="josefin-heading">2. Read Christian Poetry</h2>
               <h2>
-                iguessyoucouldcallthisablog is a christian blogger who writes
-                thought provoking posts on worldly matters. I would say they are
-                very insighful{" "}
+                This page shares heartfelt verses woven with faith and beauty. Their poetry invites readers into quiet reflection, offering words that inspire, comfort, and draw hearts closer to God’s presence.{" "}
               </h2>
               <Link
                 href={"/poems"}
@@ -127,9 +125,7 @@ export default function Home() {
             <div className="m-2 w-1/3 flex flex-col justify-between gap-3 bg-white p-4 rounded-md h-full">
               <h2 className="josefin-heading">3. View the Gallery</h2>
               <h2>
-                iguessyoucouldcallthisablog is a christian blogger who writes
-                thought provoking posts on worldly matters. I would say they are
-                very insighful{" "}
+                The gallery curates a collection of faith-filled imagery and vision boards. Each piece is designed to uplift the spirit, blending creativity and devotion in visuals that capture the essence of Christian living.{" "}
               </h2>
               <Image
                 src="/gallery/i6.png"
